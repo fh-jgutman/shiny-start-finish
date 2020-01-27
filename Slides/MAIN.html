@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="generator" content="pandoc">
-  <title>MAIN.utf8.md</title>
+  <title>MAIN.utf8</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -1369,13 +1369,72 @@ UI <- tagList(
 </section><section id="exercise-n-1" class="slide level2">
 <h2>Exercise n-1</h2>
 <p>With your neighbor, draw the UI tree on paper.</p>
-<p><img data-src="#section-2" />(images/ggextra.png](<a href="https://daattali.com/shiny/ggExtra-ggMarginal-demo/" class="uri">https://daattali.com/shiny/ggExtra-ggMarginal-demo/</a>)</p>
+<p><a href="https://daattali.com/shiny/ggExtra-ggMarginal-demo/"><img data-src="images/ggextra.png" /></a></p>
 </section><section id="exercise-n" class="slide level2">
 <h2>Exercise n</h2>
 <p>The <a href="https://www.economist.com/news/2020/01/15/the-big-mac-index"><em>Economist</em>’s Big Mac index visualizer</a> isn’t written as a Shiny app (I think!), but sketch out how you would write a Shiny app to mimic it.</p>
 </section><section id="if-you-havent-had-enough" class="slide level2">
 <h2>If you haven’t had enough …</h2>
+<<<<<<< HEAD
 <p><img data-src="#section-2" />(images/twin-cities-busses.png](<a href="https://shiny.rstudio.com/gallery/bus-dashboard.html" class="uri">https://shiny.rstudio.com/gallery/bus-dashboard.html</a>)</p>
+=======
+<p><a href="https://shiny.rstudio.com/gallery/bus-dashboard.html"><img data-src="images/twin-cities-busses.png" /></a></p>
+</section><section id="project-2" class="slide level2">
+<h2>Project 2</h2>
+</section><section id="project-2-calculator" class="slide level2">
+<h2>Project 2: Calculator</h2>
+<p>In the <code>Projects/Project-2-calculator</code> directory are several files.</p>
+<p>We’ll start with <code>app.R</code> and <code>keyboard.R</code>.</p>
+</section><section id="phase-i-extend-the-ui" class="slide level2">
+<h2>Phase I: Extend the UI</h2>
+<ol type="1">
+<li>Confirm that you can run <code>app.R</code> to create a UI as might be suitable for a calculator.</li>
+<li>Glance through the functions in <code>keyboard.R</code> to get an idea of how you might add new keys. (Hint: It’s not hard.)</li>
+<li>Add several keys: square-root, exp, ln, sin, …. Keep in mind, these keys don’t have to do anything yet except allow themselves to be pushed.</li>
+</ol>
+</section><section id="phase-ii-start-writing-the-server" class="slide level2">
+<h2>Phase II: Start writing the server</h2>
+<p>The file <code>server-starting.R</code> contains statements that call some of the Shiny functions to create reactives. These statements will be <code>source()</code>d into the <code>server()</code> function, as if they were typed there.</p>
+<p>To start the server:</p>
+<ol type="1">
+<li>Create a reactive value <code>entry_string</code>. This will store the number being created at the keyboard. Initialize it to a blank string: <code>&quot;&quot;</code>.
+<ul>
+<li>which of the Shiny functions to make reactives will you use?</li>
+</ul></li>
+<li>Arrange that the value of <code>entry_string</code> is at all times displayed in the <code>current</code> UI output widget.
+<ul>
+<li>which of the Shiny functions to make reactive displays will you use?</li>
+</ul></li>
+<li>Write an observer which, when the “one” button is pressed, concatenates a “1” to the <code>entry_string</code>.
+<ul>
+<li>Use <code>observeEvent()</code>.</li>
+</ul></li>
+<li>Write similar observers for the other 11 buttons in the 4x3 array of keyboard buttons.
+<ul>
+<li>the tricky one is for “delete”. <code>substr()</code> and <code>nchar()</code> will help.</li>
+</ul></li>
+</ol>
+</section><section id="phase-3-respond-to-the-operation-buttons" class="slide level2">
+<h2>Phase 3: Respond to the operation buttons</h2>
+<p>The file <code>server-ops.R</code> is intended to hold server commands to handle the operation button presses. It’s blank right now.</p>
+<p>Your task is to implement a system that will determine which operation button was pressed and store a corresponding identifying string in the reactive value named <code>last_op</code>.</p>
+</section><section id="when-last_op-changes" class="slide level2">
+<h2>When <code>last_op()</code> changes</h2>
+</section><section id="your-turn-taking-an-action-when-last_op-changes" class="slide level2">
+<h2>Your Turn: Taking an action when <code>last_op</code> changes</h2>
+<p>Read through <code>server-ops-soln.R</code> to see some ideas.</p>
+<ol type="1">
+<li>Make a note of what doesn’t make sense to you or why one reactive constructor is used rather than another.</li>
+<li>Let’s discuss and play with changes as they come up.</li>
+</ol>
+</section><section id="changes-that-dont-register" class="slide level2">
+<h2>Changes that don’t register</h2>
+<p>In <code>server-ops-soln.R</code> on lines 18, 20, 22, and so on, what’s going on? Why is <code>last_op()</code> being called twice, when only the second call really matters? What happens when the first call is deleted?</p>
+<p>Hint: 3 + 2 + 4</p>
+</section><section id="see-what-happens-if-we-change-observeevent-to-observe" class="slide level2">
+<h2>See what happens if we change observeEvent to observe</h2>
+<p>Talk about isolate.</p>
+>>>>>>> checkpoint
 </section></section>
 <section><section id="background-functions" class="title-slide slide level1"><h1>Background: Functions</h1></section><section id="function-environment-closure" class="slide level2" style="margin:10px;font-size:80%;">
 <h2>Function + Environment = “<em>closure</em>”</h2>

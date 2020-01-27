@@ -240,7 +240,8 @@ miniUI::miniPage(
 
 With your neighbor, draw the UI tree on paper.
 
-![](images/ggextra.png](https://daattali.com/shiny/ggExtra-ggMarginal-demo/) 
+[![](images/ggextra.png)](
+https://daattali.com/shiny/ggExtra-ggMarginal-demo/)
 
 ## Exercise n
 
@@ -248,5 +249,6 @@ The [*Economist*'s Big Mac index visualizer](https://www.economist.com/news/2020
 
 ## If you haven't had enough ...
 
-![](images/twin-cities-busses.png](https://shiny.rstudio.com/gallery/bus-dashboard.html)
+[![](images/twin-cities-busses.png)](
+https://shiny.rstudio.com/gallery/bus-dashboard.html)
 

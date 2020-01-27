@@ -22,7 +22,8 @@ UI <-
                  c("Normal" = "norm",
                    "Uniform" = "unif",
                    "Log-normal" = "lnorm",
-                   "Exponential" = "exp"))
+                   "Exponential" = "exp")),
+    passwordInput("pwd", "Enter password here")
     #textOutput("felix"),
     #plotOutput("fiona")
   )
