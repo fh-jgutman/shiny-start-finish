@@ -10,6 +10,7 @@ ui <- tagList(
       href = "bootstrap.cerulean.css"
     )),
   h1("Pythagoras and his triangles"),
+  # www folder contains items that should be exposed on the server
   img(src="right-triangle.jpeg"),
   p("Specifying the lengths of the legs ... "),
   numericInput("A", "Leg A:", value = 3),
@@ -25,8 +26,6 @@ server <- function(input, output, session) {
 }
 
 options(shiny.reactlog=TRUE)
-#reactlogReset()
-# after App runs:  reactlogShow()
+reactlogReset()
 
 shinyApp(ui, server)
-

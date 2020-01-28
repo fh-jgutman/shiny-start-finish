@@ -12,7 +12,8 @@ package_list <- c(
   "learnr",          # workshop specific
   "plotly",          # workshop specific
   "revealjs",        # just for compiling slide collection
-  "mosaic"           # some data sets, etc
+  "mosaic",           # some data sets, etc
+  "reactlog"
   )
 
 # Run this 

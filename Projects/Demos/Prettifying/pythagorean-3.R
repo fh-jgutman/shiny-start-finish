@@ -17,9 +17,8 @@ server <- function(input, output, session) {
   output$C <- renderText(C())
 }
 
-options(reactlog=TRUE)
+options(shiny.reactlog=TRUE)
 reactlogReset()
-# after App runs:  reactlogShow()
 
 shinyApp(ui, server)
 

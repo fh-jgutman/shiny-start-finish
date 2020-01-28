@@ -1,6 +1,8 @@
 ## Function + Environment = "*closure*" {style="margin:10px;font-size:80%;"}
 
-Functions are containers for R code.^[There are others, see `quote()`, `expression`, and `parse`.]
+Functions are containers for R code. 
+
+There are others, see `quote()`, `expression`, and `parse`.
 
 <div class="container">
 <div class="col">

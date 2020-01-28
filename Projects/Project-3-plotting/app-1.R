@@ -6,9 +6,9 @@ ui <- fluidPage(
                           "mtcars", "iris", "CPS85"),
               selected = character()),
   selectInput("response", "Response var:", 
-              choices = c("Waiting for you to choose frame" = "")),
+              choices = names(Raw_data)),
   selectInput("explanatory", "Explan var:",
-              choices = c("Waiting for you to choose response var" = "")),
+              choices = names(Raw_data)),
   tableOutput("show_df")
 )
 

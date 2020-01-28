@@ -367,7 +367,8 @@ summary {
 
 <div id="function-environment-closure" class="section level2" style="margin:10px;font-size:80%;">
 <h2>Function + Environment = “<em>closure</em>”</h2>
-<p>Functions are containers for R code.<a href="#fn1" class="footnote-ref" id="fnref1"><sup>1</sup></a></p>
+<p>Functions are containers for R code.</p>
+<p>There are others, see <code>quote()</code>, <code>expression</code>, and <code>parse</code>.</p>
 <div class="container">
 <div class="col">
 <p>Constructing functions</p>
@@ -473,12 +474,6 @@ bigger_code &lt;- substitute({
 }</code></pre>
 <p>The function <code>f1</code> knows to look to it’s birth environment for the value of <code>input</code>.</p>
 <p><code>shinyApp()</code> sets this up.</p>
-</div>
-<div class="footnotes">
-<hr />
-<ol>
-<li id="fn1"><p>There are others, see <code>quote()</code>, <code>expression</code>, and <code>parse</code>.<a href="#fnref1" class="footnote-back">↩</a></p></li>
-</ol>
 </div>
 
 

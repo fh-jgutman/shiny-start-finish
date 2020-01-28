@@ -1438,7 +1438,8 @@ UI <- tagList(
 </section></section>
 <section><section id="background-functions" class="title-slide slide level1"><h1>Background: Functions</h1></section><section id="function-environment-closure" class="slide level2" style="margin:10px;font-size:80%;">
 <h2>Function + Environment = “<em>closure</em>”</h2>
-<p>Functions are containers for R code.<a href="#/fn1" class="footnote-ref" id="fnref1"><sup>1</sup></a></p>
+<p>Functions are containers for R code.</p>
+<p>There are others, see <code>quote()</code>, <code>expression</code>, and <code>parse</code>.</p>
 <div class="container">
 <div class="col">
 <p>Constructing functions</p>
@@ -1772,7 +1773,7 @@ UI <- tagList(
 </section><section id="using-reactlogshow" class="slide level2">
 <h2>Using <code>reactlogShow()</code></h2>
 <p>Dark lines show connections that have become apparent when “calculating” a node.</p>
-<p>Light lines are connections that have not yet become apparent.<a href="#/fn2" class="footnote-ref" id="fnref2"><sup>2</sup></a></p>
+<p>Light lines are connections that have not yet become apparent.<a href="#/fn1" class="footnote-ref" id="fnref1"><sup>1</sup></a></p>
 <p>Let’s rewind to the beginning.</p>
 <p>Then one step at a time, and narrate.</p>
 </section><section id="adding-a-conductor-pythagorean-2.r" class="slide level2">
@@ -2628,8 +2629,7 @@ output:
 <section class="footnotes">
 <hr />
 <ol>
-<li id="fn1"><p>There are others, see <code>quote()</code>, <code>expression</code>, and <code>parse</code>.<a href="#/fnref1" class="footnote-back">↩</a></p></li>
-<li id="fn2"><p>But the visualizer knows that they will eventually be used.<a href="#/fnref2" class="footnote-back">↩</a></p></li>
+<li id="fn1"><p>But the visualizer knows that they will eventually be used.<a href="#/fnref1" class="footnote-back">↩</a></p></li>
 </ol>
 </section>
     </div>
@@ -2675,6 +2675,7 @@ output:
         dependencies: [
           { src: 'MAIN_files/reveal.js-3.3.0.1/plugin/notes/notes.js', async: true },
           { src: 'MAIN_files/reveal.js-3.3.0.1/plugin/search/search.js', async: true },
+          { src: 'MAIN_files/reveal.js-3.3.0.1/plugin/zoom-js/zoom.js', async: true },
           { src: 'MAIN_files/reveal.js-3.3.0.1/plugin/chalkboard/chalkboard.js', async: true },
           { src: 'MAIN_files/reveal.js-3.3.0.1/plugin/menu/menu.js', async: true },
         ]
