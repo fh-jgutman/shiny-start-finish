@@ -11,8 +11,8 @@ server <- function(input, output, session) {
   source("server-starting.R", local = TRUE)
   ## comment these out when you start to work on
   ## your own server logic.
-  source("server-keypad-soln.R", local = TRUE)
-  source("server-ops-soln.R", local=TRUE)
+  #source("server-keypad-soln.R", local = TRUE)
+  #source("server-ops-soln.R", local=TRUE)
 }
 
 shinyApp(ui, server)

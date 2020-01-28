@@ -8,6 +8,21 @@ UI <-
     sliderInput("fred", "Value:", min=0, max=100, value=55),
     selectInput("annie", "Pick an animal",
                 choices = c("antelope", "bear", "chicken", "dove")),
-    textOutput("felix"),
-    plotOutput("fiona")
+    
+    actionLink("click", "Click here"),
+    checkboxInput("checks", "Some value", FALSE),
+    checkboxGroupInput("icons", "Choose icons:",
+                       choiceNames =
+                         list(icon("calendar"), icon("bed"),
+                              icon("cog"), icon("bug")),
+                       choiceValues =
+                         list("calendar", "bed", "cog", "bug")
+    ),
+    radioButtons("dist", "Distribution type:",
+                 c("Normal" = "norm",
+                   "Uniform" = "unif",
+                   "Log-normal" = "lnorm",
+                   "Exponential" = "exp"))
+    #textOutput("felix"),
+    #plotOutput("fiona")
   )
